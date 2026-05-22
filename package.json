@@ -1,0 +1,29 @@
+{
+  "name": "frontend-builder-skill",
+  "version": "1.0.0",
+  "description": "Comprehensive Frontend UI/UX and Premium Styling agent skill for Claude Code, Codex, and Antigravity",
+  "bin": {
+    "frontend-builder-skill": "./bin/install.mjs"
+  },
+  "keywords": [
+    "frontend",
+    "ui",
+    "ux",
+    "styling",
+    "css",
+    "tailwind",
+    "animations",
+    "design-system",
+    "claude-code",
+    "codex",
+    "antigravity",
+    "skill",
+    "agent-skill"
+  ],
+  "author": "kevin-van-deventer",
+  "license": "MIT",
+  "files": [
+    "bin/",
+    "skill/"
+  ]
+}
