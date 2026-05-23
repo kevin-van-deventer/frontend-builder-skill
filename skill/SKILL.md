@@ -5,18 +5,22 @@ A comprehensive playbook, standard, and instruction set for creating visually st
 ## Core Directives
 
 ### 1. Visual Excellence & Rich Aesthetics
-- ** Harmonious Palettes**: Avoid basic web-safe colors. Utilize tailored HSL gradients, glassmorphism (`backdrop-filter`), elegant borders, and soft shadows (`shadow-sm`, `shadow-xl`).
-- **Typography Priority**: Import premium typography (e.g., Google Fonts like Inter, Outfit, Playfair Display) rather than relying on standard browser fallbacks. Configure scale, weight, and tracking (`tracking-wide`, `tracking-tight`) to fit the brand's archetype.
-- **Biophilic & Theme-centric Gradients**: Draw inspiration from nature (biophilic colors: forest, sage, cream, sky) and map them cleanly to CSS variable structures.
+- **Harmonious Palettes**: Enforce a maximum of **1 highly saturated accent color (< 80%)** paired with clean neutral bases (Zinc/Slate/Neutral). Avoid basic web-safe colors. Utilize tailored HSL gradients, glassmorphism (`backdrop-filter`), elegant borders, and soft shadows.
+- **Premium Typography**: Install and configure high-end, premium typographies (e.g., `@fontsource/geist-sans`, `@fontsource/geist-mono`, Outfit, Satoshi, Cabinet Grotesk). **NEVER use standard browser defaults or generic Inter**. Use tracking-tighter headlines (`text-4xl md:text-6xl tracking-tighter leading-none`).
+- **Layout Architecture**: Avoid generic centered heroes or boilerplate 3-column layouts. Leverage asymmetric, left-aligned, or split-screen grids.
+- **Card Hierarchy**: Elevate card components only when conveying distinct content hierarchies. Avoid card borders and plain gray backgrounds.
+- **No AI Slop**: Remove all generic emojis, stubs like "John Doe" or "Acme Corp", and cheesy marketing terms like "seamless," "unleash," or "empower."
 
 ### 2. Responsiveness & Mobile-First Execution
 - Implement flexible layouts using modern CSS Flexbox and Grid.
+- Enforce `min-h-[100dvh]` to prevent screen layout jumping on mobile dynamic address bars.
 - Design mobile-first. Ensure all tap targets are at least `48px * 48px` to guarantee physical accessibility on touch screens.
 - Use explicit aspect ratios to avoid Cumulative Layout Shift (CLS) when loading images and media elements.
 
 ### 3. High-Fidelity Micro-Animations
 - Add transitions on interactive items (buttons, inputs, links, cards):
   `transition-all duration-300 ease-out hover:scale-[1.02] active:scale-[0.98]`
+- Configure smooth spring physics in interactive widgets (e.g., Framer Motion spring damping setups: stiffness 100, damping 20).
 - Utilize keyframe-driven intro animations to make page loads feel organic and elegant (e.g., fade-ins, slide-ups).
 - Suppress structural animations for users with `prefers-reduced-motion` media queries to ensure comprehensive accessibility.
 
